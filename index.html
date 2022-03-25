@@ -12,6 +12,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="main-content">
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "108804294797379");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <header class="section sec1 header active" id="home">
         <div class="header-content">
             <div class="left-header">
@@ -22,8 +49,8 @@
             </div>
             <div class="right-header">
                 <h1 class="name">
-                    Hi, I'm <span>Romeo Bulalacao Jr.</span>
-                    A Web Developer.
+                    Hi, I'm <span>Romeo Bulalacao Jr.</span><br>
+                    <small>A Web Developer.</small> </br>
                 </h1>
                 <p>
                     I'm a Web Developer, I love to create beautiful and functional websites.
@@ -456,7 +483,7 @@
                                     <span>Location</span>
                                 </div>
                                 <p>
-                                    : London, united Kingdom
+                                    : Legazpi, Albay
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -465,7 +492,7 @@
                                     <span>Email</span>
                                 </div>
                                 <p>
-                                    <span>: maclinzuniversal@gmail.com</span>
+                                    <span>: meteorites86@gmail.com</span>
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -474,7 +501,7 @@
                                     <span>Education</span>
                                 </div>
                                 <p>
-                                    <span>: Sussex University, East Sussex</span>
+                                    <span>: ICCT Colleges Foundation Inc.</span>
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -483,7 +510,7 @@
                                     <span>Mobile Number</span>
                                 </div>
                                 <p>
-                                    <span>: 07522670617</span>
+                                    <span>: 0927-466-2313</span>
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -492,7 +519,7 @@
                                     <span>Languages</span>
                                 </div>
                                 <p>
-                                    <span>: Afrikaans, English, Spanish</span>
+                                    <span>: English, Tagalog, Bisaya</span>
                                 </p>
                             </div>
                         </div>
@@ -559,6 +586,30 @@
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
+    <script>
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+        scrollFunction();
+        };
+        function scrollFunction() {
+        if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+        ) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+        function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
 
     <script src="app.js"></script>
 </body>
