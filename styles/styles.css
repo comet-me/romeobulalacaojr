@@ -286,6 +286,15 @@ section {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 } */
+#btn-back-to-top{
+  padding: 0.5rem;
+  color: var(--color-secondary);
+  /* position: fixed;
+  bottom: 80px;
+  right: 50px;
+  background-color: var(--color-grey-3);
+  display: none !important; */
+}
 
 .header-content .right-header {
   display: -webkit-box;
