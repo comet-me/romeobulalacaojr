@@ -44,7 +44,10 @@ body {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
-
+ul li
+{
+  list-style: square;
+}
 a {
   display: inline-block;
   text-decoration: none;
