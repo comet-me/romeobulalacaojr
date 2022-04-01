@@ -11,7 +11,7 @@
   "author": "Romeo Bulalacao Jr.",
   "license": "ISC",
   "devDependencies": {
-    "bootstrap": "^5.0.2",
+    "bootstrap": "^5.1.3",
     "lite-server": "^2.6.1"
   },
   "dependencies": {
