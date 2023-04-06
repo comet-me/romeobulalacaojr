@@ -223,6 +223,7 @@
         sidemenuz.style.right = "-200px";
     }
 </script>
+<!-- ------adding functionality of submit button from contact form; sending data to google sheet------- -->
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycby6vW5_DAIiaqgqQzLRmEpVCa-Nu_FhUDJtfRpw6f2MuhUBGKQgFotKRAOnOpYIOtm7/exec'
     const form = document.forms['submit-to-google-sheet']
@@ -233,7 +234,7 @@
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
             msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
+            setTimeout(function(){ // adding timer to auto hide the message and then reset the form to empty
                 msg.innerHTML = ""
             },5000)
             form.reset()
@@ -241,29 +242,28 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+    <!-- -------------adding functionality to [back to top] button------------------------ -->
   <script>
-    // -------------back to the top ------------------------
-//Get the button
-let mybutton = document.getElementById("btn-back-to-top");
-        // When the user scrolls down 20px from the top of the document, show the button
+    let mybutton = document.getElementById("btn-back-to-top");
+        // When the user scrolls down 1600px from the top of the document, show the button
         window.onscroll = function () {
         scrollFunction();
         };
         function scrollFunction() {
         if (
-        document.body.scrollTop > 1600 ||
-        document.documentElement.scrollTop > 1600
+            document.body.scrollTop > 1600 ||
+            document.documentElement.scrollTop > 1600
         ) {
-        mybutton.style.display = "block";
+            mybutton.style.display = "block";
         } else {
-        mybutton.style.display = "none";
+            mybutton.style.display = "none";
         }
         }
         // When the user clicks on the button, scroll to the top of the document
         mybutton.addEventListener("click", backToTop);
         function backToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
   </script>
 </body>
