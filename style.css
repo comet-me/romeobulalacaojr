@@ -400,13 +400,22 @@ nav .fa-solid{
 }
 #btn-back-to-top{
     cursor: pointer;
-    padding: 0.5rem;
-    background: #ff004f;
-    color: #fff;
     position: fixed;
     bottom: 67px;
     right: 5px;
     display: none;
+    font-size: 3rem;
+    background: none;
+    border-style: none;
+}
+#btn-back-to-top > i{
+    border-radius: 3px;
+    color:#ff004f;
+    background-color: #fff;
+}
+#btn-back-to-top >i:hover{
+    color: #fff;
+    background: #ff004f;
 }
 #modalBtn, .btnServices{
     background: #ff004f;
