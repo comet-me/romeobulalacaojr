@@ -104,13 +104,12 @@
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
             <div>
-                <!-- <i class="fa-solid fa-crop"></i> -->
                 <i class="fa-brands fa-blogger"></i>
                 <h2>Blog Site</h2>
                 <p>This blog offers a wealth of information for travelers, including recommendations for 
                     scenic destinations, travel planning, packing, and inspiration.
                 </p>
-                <a href="https://travelbees.online" target="_blank">Learn more</a>
+                <a class="btnServices" href="https://travelbees.online" target="_blank">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-magnifying-glass-dollar fa-bounce"></i>
@@ -118,16 +117,30 @@
                 <p>It is part of the Microsoft Power Platform and can be integrated
                      with other Microsoft products such as Dynamics 365.
                 </p>
-                <a href="https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-what-is-desktop">Learn more</a>
+                    <a class="btnServices" href="https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-what-is-desktop" target="_blank">Learn more</a>
             </div>
             <div>
-                <!-- <i class="fa-brands fa-app-store"></i> -->
                 <i class="fa-solid fa-handshake-angle fa-shake"></i>
                 <h2>Virtual Assistant</h2>
                 <p>There are so many things I am capable of, and one of the things I have is I am teachable person.
-                    
+                </p><br>
+                <!-- <a href="#contact">Learn more</a> -->
+                <button id="modalBtn" class="button">Learn more...</button>
+              
+            </div>
+        </div>
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <i class="fa-solid fa-handshake-angle fa-shake"></i>
+                <h3>Virtual Asssistant</h3><br>
+                <p>There are so many things I am capable of, and one of the things I have is I am teachable person.</p>
+                <p>
+                    I can help you with various tasks, including administrative work, bookkeeping, etc.
+                    I am proud to say that I have the qualities to be good in my profession.
+                     Aside from being a teachable person, I also have tech-savvy skills, computer literacy, integrity, proactivity and trustworthiness.
+                     Other things cannot be justified just by reading this, <span class="magicLetter">S</span>o why not try me and put me to the test?
                 </p>
-                <a href="#contact">Learn more</a>
             </div>
         </div>
     </div>
@@ -145,7 +158,7 @@
                 <div class="layer">
                     <h3>Blogger Site</h3>
                     <p>This is a travel blog I made using Joomla.</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square fa-lg"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -153,7 +166,7 @@
                 <div class="layer">
                     <h3>Microsoft Power BI: Data Visualization</h3>
                     <p>Here is my sample report using Microsoft Power BI.</p>
-                    <a href="https://app.powerbi.com/view?r=eyJrIjoiN2M2ZDQ5NTQtNThjOS00YTZkLWIzNzktNTdhMDA0N2ZhNTllIiwidCI6IjA3NDBiZWNkLTBjOWEtNDcwMC05OTZlLWY5ZTA3MjU2YmFhZCIsImMiOjEwfQ%3D%3D" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiN2M2ZDQ5NTQtNThjOS00YTZkLWIzNzktNTdhMDA0N2ZhNTllIiwidCI6IjA3NDBiZWNkLTBjOWEtNDcwMC05OTZlLWY5ZTA3MjU2YmFhZCIsImMiOjEwfQ%3D%3D" target="_blank"><i class="fa-solid fa-up-right-from-square fa-lg"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -161,7 +174,7 @@
                 <div class="layer">
                     <h3>Freelancer Job</h3>
                     <p>I handle any virtual assistant job that are align with my skills.</p>
-                    <a href="#contact"><i class="fa-solid fa-link"></i></a>
+                    <a href="#contact"><i class="fa-solid fa-up-right-from-square fa-lg"></i></a>
                 </div>
             </div>
         </div>
@@ -266,6 +279,26 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+  </script>
+  <!-- --------------adding modal------------- -->
+  <script>
+    var modal =document.getElementById('simpleModal');
+    var modalBtn =document.getElementById('modalBtn');
+    var closeBtn = document.getElementsByClassName('closeBtn')[0];
+    modalBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click',clickOutside);
+
+    function openModal(){
+        modal.style.display = 'block';
+    }
+    function closeModal(){
+        modal.style.display = 'none';
+    }
+    function outsideClick(e){
+        modal.style.display = 'none';
+    }
+
   </script>
 </body>
 </html>
