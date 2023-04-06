@@ -16,11 +16,11 @@
         <nav class="sticky">
             <img src="images/logo.png" class="logo" alt="mylogo">
             <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#header" onclick="closemenu()">Home</a></li>
+                <li><a href="#about" onclick="closemenu()">About</a></li>
+                <li><a href="#services" onclick="closemenu()">Services</a></li>
+                <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
+                <li><a href="#contact" onclick="closemenu()">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -198,6 +198,7 @@
         <p>Copyright © Romeo Bulalacao Jr.</p>
     </div>
 </div>
+<!-- ------skills,experience,education; display/hide------- -->
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -212,6 +213,7 @@
         document.getElementById(skillsExpEdu).classList.add("active-tab");
     }
 </script>
+<!-- ------for mobile view; display/hide hamburger/close icon------- -->
 <script>
     var sidemenuz = document.getElementById("sidemenu");
     function openmenu(){
