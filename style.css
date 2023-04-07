@@ -184,7 +184,7 @@ nav ul li a:hover::after{
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: linear-gradient(to right, #360126, #7a144c);
     transform: translate(-10px);
 }
 /* -----------portfolio-------------- */
@@ -423,9 +423,11 @@ nav .fa-solid{
     color: #fff;
     border: 0;
     cursor: pointer;
+    transition: 0.5s;
 }
 #modalBtn:hover, .btnServices:hover{
-    background:#333;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.1);
 }
 .modal{
     display: none;
